@@ -10,6 +10,13 @@ public class Deck {
 
     private  ArrayList<Card> deck;
 
+    @Override
+    public String toString() {
+        return "Deck{" +
+                "deck=" + deck +
+                '}';
+    }
+
     public  Deck(){
         deck= new ArrayList<>();
         for(CardSuite suite: CardSuite.values()){
