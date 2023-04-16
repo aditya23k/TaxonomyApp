@@ -1,6 +1,5 @@
 package org.CardGameContents;
 
-
 import lombok.Getter;
 
 @Getter
@@ -11,10 +10,14 @@ public class Card {
     private int val; //card value
 
     //constructor for the card
-    public Card(CardSuite suite, int val){
+    public Card(CardSuite suite,int val){
         this.suite= suite;
         this.val=val;
     }
+    public void printCard(){
+        System.out.println(getSuite()+" "+ getVal());
+    }
+
 
 
 
