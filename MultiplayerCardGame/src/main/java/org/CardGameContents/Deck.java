@@ -31,9 +31,7 @@ public class Deck extends Card {
     public void printCard() {
         System.out.println(getSuite()+" "+getVal());
     }
-
-
-
+    /*
     public static void main(String[] args){
 
         ArrayList<Card> nDeck= Deck();
@@ -41,8 +39,5 @@ public class Deck extends Card {
             i.printCard();
         }
     }
-
-
-
-
+    */
 }
