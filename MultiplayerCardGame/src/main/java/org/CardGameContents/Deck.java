@@ -6,15 +6,11 @@ import lombok.Getter;
 import java.util.*;
 
 @Getter
-public class Deck extends Card {
+public class Deck {
 
     public static ArrayList<Card> deck;
 
-    public Deck(CardSuite suite, int val) {
-        super(suite, val);
-    }
-
-    public static ArrayList<Card>Deck (){
+    public static ArrayList<Card>createDeck (){
         deck= new ArrayList<>();
         for(CardSuite suite: CardSuite.values()){
             //for each suite , we assign the value of the ranks,
@@ -23,14 +19,11 @@ public class Deck extends Card {
                 deck.add(new Card(suite,i));
             }
         }
-
         Collections.shuffle(deck);
         return deck;
     }
 
-    public void printCard() {
-        System.out.println(getSuite()+" "+getVal());
-    }
+
     /*
     public static void main(String[] args){
 
