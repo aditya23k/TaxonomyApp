@@ -15,6 +15,7 @@ public class Card {
         this.val=val;
     }
     public void printCard(){
+
         System.out.println(getSuite()+" "+ getVal());
     }
 

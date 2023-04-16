@@ -8,9 +8,9 @@ import java.util.*;
 @Getter
 public class Deck {
 
-    public static ArrayList<Card> deck;
+    private  ArrayList<Card> deck;
 
-    public static ArrayList<Card>createDeck (){
+    public  Deck(){
         deck= new ArrayList<>();
         for(CardSuite suite: CardSuite.values()){
             //for each suite , we assign the value of the ranks,
@@ -19,8 +19,10 @@ public class Deck {
                 deck.add(new Card(suite,i));
             }
         }
+
+    }
+    public void shuffle(){
         Collections.shuffle(deck);
-        return deck;
     }
 
 
