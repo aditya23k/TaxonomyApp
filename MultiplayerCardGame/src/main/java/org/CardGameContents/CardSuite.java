@@ -1,4 +1,4 @@
-package org.CardGameContents.Card;
+package org.CardGameContents;
 
 public enum CardSuite {
     SPADE,CLUBS,HEARTS,DIAMONDS
