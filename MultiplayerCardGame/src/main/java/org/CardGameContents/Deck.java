@@ -24,14 +24,19 @@ public class Deck extends Card {
             }
         }
 
+        Collections.shuffle(deck);
         return deck;
     }
+
     public void printCard() {
         System.out.println(getSuite()+" "+getVal());
     }
 
+
+
     public static void main(String[] args){
-        ArrayList<Card> nDeck=Deck();
+
+        ArrayList<Card> nDeck= Deck();
         for(Card i: nDeck){
             i.printCard();
         }
