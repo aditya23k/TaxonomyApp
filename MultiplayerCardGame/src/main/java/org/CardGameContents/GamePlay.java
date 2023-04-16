@@ -51,7 +51,7 @@ public class GamePlay {
         discard.push(draw.pop());
 
         int turn=0;//player turn
-        int direction=1;//order of play
+        int direction=1;//order of play-for bonus question
         int cardAdd=1;
         while(draw.size()>0){
             turn%=pl;
@@ -85,6 +85,7 @@ public class GamePlay {
         System.out.println("Match ended in Draw!");
 
     }
+    //tested the output - out of bounds exception error
 
     public static void main(String[] args) throws Exception{
         GamePlay.play();
