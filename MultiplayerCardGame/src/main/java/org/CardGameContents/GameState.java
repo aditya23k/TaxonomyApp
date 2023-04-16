@@ -30,4 +30,25 @@ public class GameState {
         return card.getSuite() == discardedCard.getSuite()
                 || card.getVal() == discardedCard.getVal();
     }
+
+    public ArrayList<Integer> getValidMoves(int playerIndex){
+        ArrayList<Integer> validMoves = new ArrayList<>();
+        int index = 0;
+        for (Card card : players.get(playerIndex).getHand()) {
+            if(validateMove(card)){
+                validMoves.add(index);
+            }
+            index++;
+        }
+        return validMoves;
+    }
+
+    public boolean canDraw(int playerIndex){
+        for (Card card : players.get(playerIndex).getHand()) {
+            if(validateMove(card)){
+                return false;
+            }
+        }
+        return true;
+    }
 }

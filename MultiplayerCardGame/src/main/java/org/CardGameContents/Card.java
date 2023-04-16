@@ -14,13 +14,12 @@ public class Card {
         this.suite= suite;
         this.val=val;
     }
-    public void printCard(){
 
-        System.out.println(getSuite()+" "+ getVal());
+    @Override
+    public String toString() {
+        return "Card{" +
+                "suite=" + suite +
+                ", val=" + val +
+                '}';
     }
-
-
-
-
-
 }
