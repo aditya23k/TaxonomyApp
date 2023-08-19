@@ -3,12 +3,12 @@ package org.CardGameContents;
 import java.util.*;
 
 public class GameState {
-    private ArrayList<Players> players;
+    private ArrayList<Player> players;
     private ArrayList<Card> deck;
     private Stack<Card> discard;
     private Stack<Card> draw;
 
-    public GameState(ArrayList<Players> players, ArrayList<Card> deck, Stack<Card> discard, Stack<Card> draw) {
+    public GameState(ArrayList<Player> players, ArrayList<Card> deck, Stack<Card> discard, Stack<Card> draw) {
         this.players = players;
         this.deck = deck;
         this.discard = discard;
@@ -19,7 +19,7 @@ public class GameState {
         if(!validateMove(card)){
             throw new UnsupportedOperationException("Illegal move");
         }
-        players.get(playerIndex).remove(card);
+        players.get(playerIndex).removeCard(card);
         discard.push(card);
     }
 
