@@ -33,11 +33,7 @@ public class FrequencyController {
 
     @GetMapping("/frequency")
     public Map<String,Integer> frequency(){
-        Map<String, Integer> map= new HashMap<>();
-        map= service.getFrequency();
-        WordFrequencyRepo wordFrequencyRepo1 = wordFrequencyRepo;
-        wordFrequencyRepo1.save(map);
-        return map;
+        return service.getFrequency();
 
     }
 }
